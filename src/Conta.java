@@ -19,4 +19,13 @@ public class Conta {
     }
   }
 
+  void transferir(double valor, Conta destino){
+    boolean conseguiuSacar = this.sacar(valor);
+
+    if(conseguiuSacar){
+      destino.depositar(valor);
+    }
+
+  }
+
 }
